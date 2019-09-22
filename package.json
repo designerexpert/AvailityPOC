@@ -1,0 +1,24 @@
+{
+    "name": "AvailityPOC",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev-install": "npm i && cd ./client && npm i && cd ..",
+        "start": "node index.js",
+        "dev": "nodemon index.js",
+        "client": "cd ./client && npm start",
+        "build": "cd ./client && npm run build",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1",
+        "jsonwebtoken": "^8.5.1"
+    },
+    "devDependencies": {
+        "nodemon": "^1.19.2"
+    }
+}
