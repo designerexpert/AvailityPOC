@@ -4,6 +4,11 @@
 
 -   Contained within [./utils/QA.md](./utils/QA.md)
 
+## UI Code can be Inspected Further by using a sandbox.
+
+Be warned, the back end Node JS functionality is not pressent in the sandbox environment. For best results test locally or deploy on a docker image that supports NodeJS v 8.11.12+
+https://codesandbox.io/s/github/designerexpert/AvailityPOC/tree/master/client
+
 ## Structure and Installation:
 
 Application is comprised of a Node JS server using Express and a React Client.
