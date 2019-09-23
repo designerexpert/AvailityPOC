@@ -11,72 +11,7 @@ import {
 } from "@material-ui/core";
 import axios from "axios";
 
-const styles = theme => ({
-    root: {
-        display: "flex",
-        flexDirection: "column",
-        height: `calc(100vh - 64px - ${theme.spacing.unit * 6}px)`,
-        width: "100%",
-        overflowY: "auto",
-        overflowX: "hidden",
-        marginTop: theme.spacing.unit * 2,
-        marginRight: theme.spacing.unit * 2
-    },
-    formContentPaper: {
-        marginTop: theme.spacing.unit * 2,
-        marginLeft: theme.spacing.unit * 2,
-        marginRight: theme.spacing.unit * 2,
-        padding: theme.spacing.unit * 2,
-        [theme.breakpoints.down("sm")]: {
-            marginTop: theme.spacing.unit,
-            marginLeft: theme.spacing.unit,
-            padding: theme.spacing.unit,
-            marginRight: theme.spacing.unit
-        }
-    },
-    formRow: {
-        width: "100%",
-        justifyContent: "center"
-    },
-    formHeader: {
-        marginTop: theme.spacing.unit * 2,
-        [theme.breakpoints.down("sm")]: {
-            minWidth: 0,
-            marginLeft: 0,
-            width: "100%"
-        },
-        [theme.breakpoints.up("md")]: {
-            minWidth: `calc(400px - ${theme.spacing.unit * 4}px)`,
-            marginLeft: theme.spacing.unit * 2
-        },
-        textAlign: "center"
-    },
-    formField: {
-        marginTop: theme.spacing.unit * 2,
-        marginLeft: 0,
-        width: "100%",
-        [theme.breakpoints.down("sm")]: {
-            marginLeft: 0,
-            width: "100%"
-        },
-        [theme.breakpoints.up("md")]: {
-            width: `calc(400px - ${theme.spacing.unit * 4}px)`,
-            marginLeft: theme.spacing.unit * 2
-        }
-    },
-    buttonsRow: {
-        display: "flex",
-        flexDirection: "row",
-        padding: theme.spacing.unit * 2,
-        alignItems: "flex-end",
-        justifyContent: "flex-end"
-    },
-    submitButton: {
-        marginLeft: theme.spacing.unit * 2,
-        marginTop: theme.spacing.unit * 2,
-        minWidth: `calc(400px - ${theme.spacing.unit * 4}px)`
-    }
-});
+import styles from "../styles/formStyles";
 
 class Registration extends Component {
     state = {
@@ -141,7 +76,7 @@ class Registration extends Component {
                 <Typography variant="h5" className={classes.formHeader}>
                     New Provider Registration
                 </Typography>
-                <Typography variant="h9" className={classes.formHeader}>
+                <Typography variant="subtitle1" className={classes.formHeader}>
                     Please complete the following form and submit.
                 </Typography>
                 <Paper className={classes.formContentPaper}>
@@ -152,7 +87,7 @@ class Registration extends Component {
                             type="text"
                             variant="outlined"
                             label="First Name"
-                            helperText="Provider's First Name. As it appears on your NPI registration"
+                            helperText="As it appears on your NPI registration"
                             onChange={this.handleChange("firstName")}
                         />
                         <TextField
@@ -161,7 +96,7 @@ class Registration extends Component {
                             type="text"
                             variant="outlined"
                             label="Last Name"
-                            helperText="Provider's Last Name. As it appears on your NPI registration"
+                            helperText="As it appears on your NPI registration"
                             onChange={this.handleChange("lastName")}
                         />
                         <TextField
@@ -170,7 +105,7 @@ class Registration extends Component {
                             type="text"
                             variant="outlined"
                             label="NPI Number"
-                            helperText="Provider's NPI Number. As it appears on your NPI registration"
+                            helperText="As it appears on your NPI registration"
                             onChange={this.handleChange("npi")}
                         />
                         <TextField

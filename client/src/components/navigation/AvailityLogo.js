@@ -1,6 +1,6 @@
 import React from "react";
 const logo = props => (
-    <svg viewBox="0 0 623.5 192" itemprop="logo">
+    <svg viewBox="0 0 623.5 192" itemProp="logo">
         <defs>
             <linearGradient
                 id="availityGradient"

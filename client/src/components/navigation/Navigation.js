@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { withRouter } from "react-router-dom";
 import { withStyles } from "@material-ui/core/styles";
-import { AppBar, Toolbar, IconButton, Tabs, Tab } from "@material-ui/core";
-import { Link } from "react-router-dom";
+import { AppBar, Toolbar, Tabs, Tab } from "@material-ui/core";
 
 import Logo from "./AvailityLogo";
 const styles = theme => ({
@@ -12,7 +11,7 @@ const styles = theme => ({
     },
 
     appBar: {
-        height: theme.spacing.unit * 7,
+        height: theme.spacing(7),
         zIndex: 10
     },
     logoContainer: {
@@ -32,7 +31,7 @@ const styles = theme => ({
         alignItems: "center",
         justifyContent: "flex-end",
         padding: "0 8px",
-        height: theme.spacing.unit * 7
+        height: theme.spacing(7)
     },
     content: {
         flexGrow: 1
@@ -41,10 +40,16 @@ const styles = theme => ({
 });
 
 class Navigation extends Component {
-    state = {};
+    state = { value: 0 };
 
     navigate = route => e => {
+        if (route === "/") this.setState({ value: 0 });
+        else this.setState({ value: 1 });
         this.props.history.push(route);
+    };
+
+    handleChange = prop => e => {
+        this.setState({ [prop]: e.target.value });
     };
 
     render() {
@@ -67,7 +72,7 @@ class Navigation extends Component {
 
                         <Tabs
                             value={this.state.value}
-                            onChange={this.handleChange}
+                            onChange={this.handleChange("value")}
                             indicatorColor="primary"
                             textColor="primary"
                             variant="fullWidth"
@@ -75,10 +80,12 @@ class Navigation extends Component {
                             <Tab
                                 label="Registration"
                                 onClick={this.navigate("/")}
+                                value={0}
                             />
                             <Tab
                                 label="Enrollment"
                                 onClick={this.navigate("/enrollment")}
+                                value={1}
                             />
                         </Tabs>
                     </Toolbar>

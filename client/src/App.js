@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import Navigation from "./components/navigation/Navigation";
 import Registration from "./components/registration/Registration";

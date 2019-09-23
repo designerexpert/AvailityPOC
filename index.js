@@ -15,7 +15,7 @@ server.use(express.static(path.join(__dirname, "client/build")));
 // TODO: Implement Security Middleware here (To Restrict Routes below this point!)
 
 // Api Router
-server.use("/local-api", apiRouter);
+server.use("/api", apiRouter);
 
 // Catch All Else for React Router Dom to handle via index.html
 server.get("*", (req, res) => {
