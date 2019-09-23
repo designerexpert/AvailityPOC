@@ -6,7 +6,7 @@
 
 ## UI Code can be Inspected Further by using a sandbox.
 
-Be warned, the back end Node JS functionality is not pressent in the sandbox environment. For best results test locally or deploy on a docker image that supports NodeJS v 8.11.12+
+Be warned, the back end Node JS functionality is not present in the sandbox environment. For best results test locally or deploy on a docker image that supports NodeJS v 8.11.12+
 https://codesandbox.io/s/github/designerexpert/AvailityPOC/tree/master/client
 
 ## Structure and Installation:
